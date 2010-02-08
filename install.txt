@@ -1,0 +1,6 @@
+1. Download and install JDK 6 first
+http://download.java.net/jdk6/binaries/
+
+2. Double click the dajoo.jar to start the server.
+
+3. Open browser to access http://localhost:8080/wiki/start

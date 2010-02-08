@@ -1,0 +1,10 @@
+==Release 0.2.2==
+* fix bug#1492720: httpd crash down when error occur
+* fix bug#1492721: firefox do not apply css
+* page trace and toolbar support
+* skeleton for account management
+
+==Release 0.2.1alpha==
+* the plugin framework
+* the http daemon plugin
+* prototype of the wiki render and wiki plugins.

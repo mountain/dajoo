@@ -1,0 +1,38 @@
+{| border="0" 
+|-
+|[[w:en:black|black]]
+|align="center" style="background:#000000; color:#ffffff; font-family:monospace;" width=15%|#000000
+|width=5%| ||[[w:en:silver (color)|silver]]
+|align="center" style="background:#c0c0c0; color:#000000; font-family:monospace;" width=15%|#c0c0c0
+|width=5%| ||[[w:en:maroon (color)|maroon]]
+|align="center" style="background:#800000; color:#ffffff; font-family:monospace;" width=15%|#800000
+|width=5%| ||[[w:en:red|red]]
+|align="center" style="background:#ff0000; color:#ffffff; font-family:monospace;" width=15%|#ff0000
+|-
+|[[w:en:Navy blue|navy]]
+|align="center" style="background:#000080; color:#ffffff; font-family:monospace;"|#000080
+|| ||[[w:en:blue|blue]]
+|align="center" style="background:#0000ff; color:#ffffff; font-family:monospace;"|#0000ff
+|| ||[[w:en:purple|purple]]
+|align="center" style="background:#800080; color:#ffffff; font-family:monospace;"|#800080
+|| ||[[w:en:fuchsia (color)|fuchsia]]
+|align="center" style="background:#ff00ff; color:#000000; font-family:monospace;"|#ff00ff
+|-
+|[[w:en:green|green]]
+|align="center" style="background:#008000; color:#ffffff; font-family:monospace;"|#008000
+|| ||[[w:en:lime (color)|lime]]
+|align="center" style="background:#00ff00; color:#000000; font-family:monospace;"|#00ff00
+|| ||[[w:en:olive (color)|olive]]
+|align="center" style="background:#808000; color:#ffffff; font-family:monospace;"|#808000
+|| ||[[w:en:yellow|yellow]]
+|align="center" style="background:#ffff00; color:#000000; font-family:monospace;"|#ffff00
+|-
+|[[w:en:teal (color)|teal]]
+|align="center" style="background:#008080; color:#ffffff; font-family:monospace;"|#008080
+|| ||[[w:en:aquamarine (color)|aqua]]
+|align="center" style="background:#00ffff; color:#000000; font-family:monospace;"|#00ffff
+|| ||[[w:en:grey|gray]]
+|align="center" style="background:#808080; color:#ffffff; font-family:monospace;"|#808080
+|| ||[[w:en:white|white]]
+|align="center" style="background:#ffffff; color:#000000; font-family:monospace;"|#ffffff
+|}

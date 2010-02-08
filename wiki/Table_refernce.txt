@@ -1,0 +1,1107 @@
+{{H:h|editor toc}}
+
+=====Pipe syntax=====
+
+Although HTML table syntax also works, special wikicode can be used to create a table, as follows:
+
+* The entire table is encased with curly brackets and a line: "<code>'''{|</code>'''"  <---between those---> "<code>'''|}'''</code>". 
+      (''So use'' "<code>'''{|</code>'''" ''to begin a table, and'' "<code>'''|}'''</code>" ''then ends that table. Make sure each has their own syntax line''). 
+* An optional '''table caption''' is included with a line "<code>|+</code> ''caption'' " after "<code>{|</code>".
+* To start a new '''table row''', type a line and a dash: "<code>'''|-'''</code>", press ''Enter'' (to skip down a line), and type the codes for each cell in that row, separated by ''newline'' or "'''|'''"
+* '''Table data''' are the codes for the cells; cell code is of the form "| ''value'' " or "| ''cell parameters'' | ''value'' " 
+* a row of '''column headings''' is identified by using "!" instead of "|", except for the separator between a cell parameter and a value; the difference with a normal row depends on the browser, column headings are often rendered in a bold font.
+* the first cell of a row is identified as '''row heading''' by starting the line with "!" instead of "|", and starting subsequent data cells on a new line.
+
+The table parameters and cell parameters are the same as in HTML, see  [http://www.w3.org/TR/html401/struct/tables.html#edef-TABLE] and  [[w:HTML element#Tables|HTML element#Tables]]. However, the <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>colgroup</code>, and <code>col</code> elements are currently not [[Help:HTML in wikitext#Permitted_HTML|supported in MediaWiki]].
+
+A table can be useful even if none of the cells have content, notably because with the use of background colors of cells the table can be a diagram, see e.g. [[m:Template talk:Square 8x8 pentomino example]]. An "image" in the form of a table is much more convenient to edit than an uploaded image. 
+
+Each row must have the same number of cells as the other rows, so that the number of columns in the table remains consistent (unless there are cells which span several columns or rows, see colspan and rowspan in Mélange example below). For empty cells, use the non-breaking space <code>&nbsp;</code> as content to ensure that the cells are displayed.
+
+==Examples==
+
+=== Simple example ===
+<pre>
+{| 
+| Cell 1, row 1 
+| Cell 2, row 1 
+|- 
+| Cell 1, row 2 
+| Cell 2, row 2 
+|}
+</pre>
+
+and
+
+<pre>
+{| 
+| Cell 1, row 1 || Cell 2, row 1 
+|- 
+| Cell 1, row 2 || Cell 2, row 2 
+|}
+</pre>
+
+both generate
+
+{| 
+| Cell 1, row 1 
+| Cell 2, row 1 
+|- 
+| Cell 1, row 2 
+| Cell 2, row 2 
+|}
+
+===Multiplication table===
+
+====Source code====
+<blockquote style="background: white; border: 1px solid black; padding: 1em;">
+<pre><nowiki>
+{| class="wikitable" style="text-align:center"
+|+Multiplication table
+|-
+! &times; !! 1 !! 2 !! 3
+|-
+! 1
+| 1 || 2 || 3
+|-
+! 2
+| 2 || 4 || 6
+|-
+! 3
+| 3 || 6 || 9
+|-
+! 4
+| 4 || 8 || 12
+|-
+! 5
+| 5 || 10 || 15
+|}
+</nowiki></pre>
+</blockquote>
+
+=====Appearance=====
+<blockquote style="background: white; border: 1px solid black; padding: 1em;">
+{| class="wikitable" style="text-align:center"
+|+Multiplication table
+|-
+! × !! 1 !! 2 !! 3
+|-
+! 1
+| 1 || 2 || 3
+|-
+! 2
+| 2 || 4 || 6
+|-
+! 3
+| 3 || 6 || 9
+|-
+! 4
+| 4 || 8 || 12
+|-
+! 5
+| 5 || 10 || 15
+|}
+</blockquote>
+
+===Color; scope of parameters===
+
+Two ways of specifying color of text and background for a single cell are as follows:
+
+<pre>
+{| 
+| bgcolor=red | <font color=white> abc
+| def
+| style="background:red; color:white" | ghi
+| jkl
+|}
+</pre>
+
+gives
+
+{| 
+| bgcolor=red | <font color=white> abc
+| def
+| style="background:red; color:white" | ghi
+| jkl
+|}
+
+As shown "font" works for one cell only, even without end tag: the end tag is produced by the system.
+
+Like other parameters, colors can also be specified for a whole row or the whole table; parameters for a row override the value for the table, and those for a cell override those for a row:
+
+<pre>
+{| style="background:yellow; color:green"
+|- 
+| abc
+| def
+| ghi
+|- style="background:red; color:white"
+| jkl
+| mno
+| pqr
+|-
+| stu
+| style="background:silver" | vwx
+| yz
+|}
+</pre>
+
+gives
+
+{| style="background:yellow; color:green"
+|- 
+| abc
+| def
+| ghi
+|- style="background:red; color:white"
+| jkl
+| mno
+| pqr
+|-
+| stu
+| style="background:silver" | vwx
+| yz
+|}
+
+The [[w:en:HTML|HTML]] 4.01 specification defines sixteen named colors, here shown with hexadecimal values:
+
+{| border="0" 
+|-
+|[[w:en:black|black]]
+|align="center" style="background:#000000; color:#ffffff; font-family:monospace;" width=15%|#000000
+|width=5%| ||[[w:en:silver (color)|silver]]
+|align="center" style="background:#c0c0c0; color:#000000; font-family:monospace;" width=15%|#c0c0c0
+|width=5%| ||[[w:en:maroon (color)|maroon]]
+|align="center" style="background:#800000; color:#ffffff; font-family:monospace;" width=15%|#800000
+|width=5%| ||[[w:en:red|red]]
+|align="center" style="background:#ff0000; color:#ffffff; font-family:monospace;" width=15%|#ff0000
+|-
+|[[w:en:Navy blue|navy]]
+|align="center" style="background:#000080; color:#ffffff; font-family:monospace;"|#000080
+|| ||[[w:en:blue|blue]]
+|align="center" style="background:#0000ff; color:#ffffff; font-family:monospace;"|#0000ff
+|| ||[[w:en:purple|purple]]
+|align="center" style="background:#800080; color:#ffffff; font-family:monospace;"|#800080
+|| ||[[w:en:fuchsia (color)|fuchsia]]
+|align="center" style="background:#ff00ff; color:#000000; font-family:monospace;"|#ff00ff
+|-
+|[[w:en:green|green]]
+|align="center" style="background:#008000; color:#ffffff; font-family:monospace;"|#008000
+|| ||[[w:en:lime (color)|lime]]
+|align="center" style="background:#00ff00; color:#000000; font-family:monospace;"|#00ff00
+|| ||[[w:en:olive (color)|olive]]
+|align="center" style="background:#808000; color:#ffffff; font-family:monospace;"|#808000
+|| ||[[w:en:yellow|yellow]]
+|align="center" style="background:#ffff00; color:#000000; font-family:monospace;"|#ffff00
+|-
+|[[w:en:teal (color)|teal]]
+|align="center" style="background:#008080; color:#ffffff; font-family:monospace;"|#008080
+|| ||[[w:en:aquamarine (color)|aqua]]
+|align="center" style="background:#00ffff; color:#000000; font-family:monospace;"|#00ffff
+|| ||[[w:en:grey|gray]]
+|align="center" style="background:#808080; color:#ffffff; font-family:monospace;"|#808080
+|| ||[[w:en:white|white]]
+|align="center" style="background:#ffffff; color:#000000; font-family:monospace;"|#ffffff
+|}
+
+
+See [[w:en:web colors]]. To make the table blend in with the background, use <code>style="background:inherit"</code>.
+
+===Width, height===
+The width and height of the whole table can be specified, as well as the height of a row. To specify the width of a column one can specify the width of an arbitrary cell in it. If the width is not specified for all columns, and/or the height is not specified for all rows, then there is some ambiguity, and the result depends on the browser. 
+<pre>
+{| style="width:75%; height:200px" border="1"
+|- 
+| abc
+| def
+| ghi
+|- style="height:100px" 
+| jkl
+| style="width:200px" |mno
+| pqr
+|-
+| stu
+| vwx
+| yz
+|}
+</pre>
+
+gives
+
+{| style="width:75%; height:200px" border="1"
+|- 
+| abc
+| def
+| ghi
+|- style="height:100px" 
+| jkl
+| style="width:200px" |mno
+| pqr
+|-
+| stu
+| vwx
+| yz
+|}
+
+===Positioning===
+One can position the table itself, and all contents in a row, and contents in a cell, but not with a single parameter all contents in the table, see [[m:Template talk:Table demo]]. Do not, under any circumstances, use "float" to position a table. It will break page rendering at large font sizes.
+
+===Mélange===
+Here's a more advanced example, showing some more options available for making up tables. You can play with these settings in your own table to see what effect they have. Not all of these techniques may be appropriate in all cases; just because you can add colored backgrounds, for example, doesn't mean it's always a good idea. Try to keep the markup in your tables relatively simple -- remember, other people are going to be editing the article too! This example should give you an idea of what is possible, though.
+
+====Source code====
+<blockquote style="background: white; border: 1px solid black; padding: 1em; overflow: scroll">
+<pre><nowiki>
+{| border="1" cellpadding="5" cellspacing="0" align="center"
+|+'''An example table'''
+|-
+! style="background:#efefef;" | First header
+! colspan="2" style="background:#ffdead;" | Second header
+|-
+| upper left
+|  
+| rowspan=2 style="border-bottom:3px solid grey;" valign="top" |
+right side
+|-
+| style="border-bottom:3px solid grey;" | lower left
+| style="border-bottom:3px solid grey;" | lower middle
+|-
+| colspan="3" align="center" |
+{| border="0"
+|+''A table in a table''
+|-
+| align="center" width="150px" | [[Image:wiki.png]]
+| align="center" width="150px" | [[Image:wiki.png]]
+|-
+| align="center" colspan="2" style="border-top:1px solid red; border-right:1px
+          solid red; border-bottom:2px solid red; border-left:1px solid red;" |
+Two Wikimedia logos
+|}
+|}</nowiki></pre>
+</blockquote>
+
+====Appearance====
+<blockquote style="background: white; border: 1px solid black; padding: 1em;">
+{| border="1" cellpadding="1" cellspacing="0" align="center"
+|+'''An example table'''
+|-
+! style="background:#efefef;" | First header
+! colspan="2" style="background:#ffdead;" | Second header
+|-
+| upper left
+|  
+| rowspan=2 style="border-bottom:3px solid grey;" valign="top" |
+right side
+|-
+| style="border-bottom:3px solid grey;" | lower left
+| style="border-bottom:3px solid grey;" | lower middle
+|-
+| colspan="3" align="center" |
+{| border="0"
+|+''A table in a table''
+|-
+| align="center" width="150px" | [[Image:wiki.png]]
+| align="center" width="150px" | [[Image:wiki.png]]
+|-
+| align="center" colspan="2" style="border-top:1px solid red; border-right:1px solid red; border-bottom:2px solid red; border-left:1px solid red;" |
+Two Wikimedia logos
+|}
+|}
+</blockquote>
+
+=== Advanced example ===
+<pre>
+{| align=right border=1
+| Col 1, row 1 
+|rowspan=2| Col 2, row 1 (and 2) 
+| Col 3, row 1 
+|- 
+| Col 1, row 2 
+| Col 3, row 2 
+|}
+</pre>
+{| align=right border=1
+| Col 1, row 1 
+|rowspan=2| Col 2, row 1 (and 2) 
+| Col 3, row 1 
+|- 
+| Col 1, row 2 
+| Col 3, row 2 
+|}
+
+Note the floating table to the right.
+
+<br clear="both" />
+
+=== [[Nested]] table ===
+<pre>
+{| border=1
+| &alpha;
+| align="center" | cell2
+{| border=2 style="background-color:#ABCDEF;"
+| NESTED
+|-
+| TABLE
+|}
+| valign="bottom" | the 
+|}
+</pre>
+
+gives a nested table
+
+{| border=1
+| α
+| align="center" | cell2
+{| border=2 style="background-color:#ABCDEF;"
+| NESTED
+|-
+| TABLE
+|}
+| valign="bottom" | the original table again
+|}
+
+'''Nested tables have to start on a new line.'''
+
+===Combined use of COLSPAN and ROWSPAN===
+
+<pre>
+{| border="1" cellpadding="5" cellspacing="0"
+|-
+! Column 1 || Column 2 || Column 3
+|-
+| rowspan=2| A
+| colspan=2 align="center"| B
+|-
+| C
+| D
+|-
+| E
+| colspan=2 align="center"| F
+|- 
+| rowspan=3| G
+| H
+| I
+|- 
+| J
+| K
+|-
+| colspan=2 align="center"| L
+|}</pre>
+
+
+{| border="1" cellpadding="5" cellspacing="0"
+|-
+! Column 1 || Column 2 || Column 3
+|-
+| rowspan=2| A
+| colspan=2 align="center"| B
+|-
+| C
+| D
+|-
+| E
+| colspan=2 align="center"| F
+|- 
+| rowspan=3| G
+| H
+| I
+|- 
+| J
+| K
+|-
+| colspan=2 align="center"| L
+|}
+
+==Default text alignment==
+By default, all text in table cells is left-aligned, whilst headers are centered. To change these settings for a table, use
+<tt><nowiki>{| style="text-align:align-type"</nowiki></tt> where <tt>align-type</tt> can be <tt>left</tt>, <tt>center</tt>, <tt>justify</tt>, or <tt>right</tt>.
+
+Example:
+<pre>
+{| class="wikitable" style="text-align:center" align="right"
+|+ '''Cells centered, table right'''
+! Lorem || ipsum || dolor
+|-
+| sit || amet, consectetur || adipisicing elit,
+|-
+| sed do eiusmod || tempor incididunt ut labore || et dolore magna aliqua.
+|}
+
+{| class="wikitable" style="text-align:right" align="left"
+|+ '''Cells right-aligned, table left'''
+! Ut || enim || ad
+|-
+| minim || veniam, quis || nostrud exercitation ullamco
+|-
+| laboris nisi ut || aliquip ex ea || commodo consequat.
+|}
+
+{{Lorem ipsum}}
+</pre>
+Yields:
+
+{| class="wikitable" style="text-align:center" align="right"
+|+ '''Cells centered, table right'''
+! Lorem || ipsum || dolor
+|-
+| sit || amet, consectetur || adipisicing elit,
+|-
+| sed do eiusmod || tempor incididunt ut labore || et dolore magna aliqua.
+|}
+
+{| class="wikitable" style="text-align:right" align="left"
+|+ '''Cells right-aligned, table left'''
+! Ut || enim || ad
+|-
+| minim || veniam, quis || nostrud exercitation ullamco
+|-
+| laboris nisi ut || aliquip ex ea || commodo consequat.
+|}
+
+{{ Lorem ipsum}}
+<br clear=both>
+
+==Centering tables==
+Centered tables can be achieved, but they will not "float"; that is to say, no text will appear to either side. The trick is <tt><nowiki>{| style="margin: 1em auto 1em auto"</nowiki></tt>
+
+<pre>
+{| class="wikitable" style="margin: 1em auto 1em auto"
+|+ '''Cells left-aligned, table centered'''
+! Duis || aute || irure
+|-
+| dolor  || in reprehenderit || in voluptate velit
+|-
+| esse cillum dolore || eu fugiat nulla || pariatur.
+|}
+
+''{{Lorem ipsum}}''
+</pre>
+
+Yields:
+
+{| class="wikitable" style="margin: 1em auto 1em auto"
+|+ '''Cells left-aligned, table centered'''
+! Duis || aute || irure
+|-
+| dolor  || in reprehenderit || in voluptate velit
+|-
+| esse cillum dolore || eu fugiat nulla || pariatur.
+|}
+
+''{{Lorem ipsum}}''
+
+==Other table syntax==
+Other types of '''table''' syntax that MediaWiki supports:
+#XHTML
+#HTML and wiki <nowiki><td></nowiki> syntax
+
+All three are supported by MediaWiki and create (currently) valid HTML output, but the pipe syntax is the simplest, except perhaps for people who are already familiar with HTML. Also, HTML and wiki <nowiki><td></nowiki> syntax will not necessarily remain browser-supported in the upcoming future, especially on handheld internet-accessible devices.
+
+See also [[w:HTML element#Tables|HTML element#Tables]]. Note however that the <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>colgroup</code>, and <code>col</code> elements are currently not [[Help:HTML in wikitext#Permitted_HTML|supported in MediaWiki]].
+
+==Comparison==
+<table class="wikitable">
+<caption>Comparison of table syntax</caption>
+<tr><th> <th>XHTML <th>HTML & Wiki-td <th>Wiki-pipe
+
+<tr>
+<th>Table
+<td><nowiki><table></table></nowiki>
+<td><nowiki><table></table></nowiki>
+<td><pre><nowiki>{| params 
+|}</nowiki></pre>
+
+<tr>
+<th>Caption
+<td><nowiki><caption></caption></nowiki>
+<td><nowiki><caption></caption></nowiki>
+<td><pre><nowiki>|+ caption</nowiki></pre>
+
+<tr>
+<th>Row
+<td><nowiki><tr></tr></nowiki>
+<td><nowiki><tr></nowiki>
+<td><pre><nowiki>|- params </nowiki></pre>
+
+<tr>
+<th>Data cell
+
+<td>
+<nowiki><td>cell1</td></nowiki><br>
+<nowiki><td>cell2</td></nowiki>
+
+<td>
+<nowiki><td>cell1</nowiki><br>
+<nowiki><td>cell2</nowiki>
+
+<td>
+<pre><nowiki>| cell1
+| cell2</nowiki></pre>
+
+<tr>
+<th>Data cell
+<td><nowiki><td>cell1</td> <td>cell2</td> <td>cell3</td></nowiki>
+<td><nowiki><td>cell1 <td>cell2 <td>cell3</nowiki>
+<td><pre><nowiki>|cell1||cell2||cell3</nowiki></pre>
+
+<tr>
+<th>Header cell
+<td><nowiki><th></th></nowiki>
+<td><nowiki><th></nowiki>
+<td><pre><nowiki>! heading</nowiki></pre>
+
+<tr>
+<th rowspan="2">Sample table
+<td colspan="3">
+<table align="center" border="1" cellspacing="0" cellpadding="3">
+   <tr>
+      <td>1</td>
+      <td>2</td>
+   </tr> 
+   <tr>
+      <td>3</td> 
+      <td>4</td> 
+   </tr>
+</table>
+
+<tr>
+<td><pre><nowiki>
+<table>
+   <tr>
+      <td>1</td>
+      <td>2</td>
+   </tr> 
+   <tr>
+      <td>3</td> 
+      <td>4</td> 
+   </tr>
+</table>
+</nowiki></pre>
+
+<td><pre><nowiki>
+<table>
+   <tr>
+      <td> 1 <td> 2
+   <tr>
+      <td> 3 <td> 4
+</table>
+</nowiki></pre>
+
+<td><pre><nowiki>
+{| 
+| 1 || 2
+|- 
+| 3 || 4
+|}</nowiki></pre>
+
+<tr>
+<th rowspan="2">Sample table
+<td colspan="3">
+<table align="center" border="1" cellspacing="0" cellpadding="3">
+   <tr>
+      <td>1</td>
+      <td>2</td>
+   </tr> 
+   <tr>
+      <td>3</td>
+      <td>4</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>6</td>
+   </tr>
+</table>
+
+<tr>
+<td><pre><nowiki>
+<table>
+   <tr>
+      <td>1</td>
+      <td>2</td>
+   </tr> 
+   <tr>
+      <td>3</td>
+      <td>4</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>6</td>
+   </tr>
+</table>
+</nowiki></pre>
+
+<td><pre><nowiki>
+<table>
+   <tr>
+      <td> 1 <td> 2
+   <tr>
+      <td> 3 <td> 4
+   <tr>
+      <td> 5 <td> 6
+</table>
+</nowiki></pre>
+
+<td><pre><nowiki>
+{| 
+| 1 || 2 
+|- 
+| 3 || 4 
+|- 
+| 5 || 6 
+|}</nowiki></pre>
+
+<tr>
+<th>Pros
+<td valign="top">
+* Can be previewed/debugged with any XHTML editor
+* Can be formatted for easier reading
+* Well-known
+
+<td valign="top">
+* Can be previewed/debugged with any HTML editor
+* Can be formatted for easier reading
+* Well-known
+* Takes less space than XHTML
+<td valign="top">
+* Easy to write
+* Easy to read
+* Takes little space
+
+<tr>
+<th>Cons
+<td valign="top">
+* Tedious
+* Takes a lot of space
+* Difficult to read quickly
+
+<td valign="top">
+* Should not be used
+* Confusing, especially for people with little HTML experience
+* Poorly formed
+* Poorly delimited
+* Generally odd looking
+* May not have browser support in future
+
+<td valign="top">
+* Unfamiliar syntax
+* Rigid structure
+* Cannot be indented
+* Text (as in HTML tags) may be easier for some people to read than series of pipes, plus signs, exclamation marks, etc.
+* Is nothing more than a shortcut for HTML-style tags.  Not easily understood by those unfamiliar with HTML table concepts
+
+<tr><th> <th>XHTML <th>HTML & Wiki-td <th>Wiki-pipe
+</table>
+
+==Pipe syntax in terms of the HTML produced==
+The pipe syntax, developed by [[m:User: Magnus Manske| Magnus Manske]], substitutes pipes (<nowiki>|</nowiki>) for HTML. There is an [http://www.uni-bonn.de/~manfear/html2wiki-tables.php on-line script] which converts html tables to pipe syntax tables.
+
+The pipes must start at the beginning of a new line, except when separating parameters from content or when using <code>||</code> to separate cells on a single line. The parameters are optional.
+
+===Tables===
+A table is defined by
+<nowiki>
+ {| ''params''
+ |}
+</nowiki>
+which equals
+<nowiki>
+ <table ''params''>Insert non-formatted text here
+ </table>
+</nowiki>
+
+:''Careful'': You '''must include''' the '''space''' between <code>'''{|'''</code> and <code>''params''</code>, or the first parameter gets ignored.
+
+===Rows===
+<tr> tags will be generated automatically for the first row. To start a new row, use
+ |-
+which results in
+ <tr>
+Parameters can be added like this:
+ |- ''params''
+which results in
+ <tr ''params''>
+
+Note:
+* <tr> tags will be automatically opened at the first <td> equivalent
+* <tr> tags will be automatically closed at <tr> and </table> equivalents
+
+===Cells===
+Cells are generated either like this:
+ |cell1
+ |cell2
+ |cell3
+or like this:
+ |cell1||cell2||cell3
+which both equal
+ <td>cell1</td><td>cell2</td><td>cell3</td>
+so "||" equals "newline" + "|"
+
+Parameters in cells can be used like this:
+ |''params''|cell1||''params''|cell2||''params''|cell3
+which will result in
+ <td ''params''>cell1</td>
+ <td ''params''>cell2</td>
+ <td ''params''>cell3</td>
+
+===Headers===
+Functions the same way as TD, except "!" is used instead of the opening "|". "!!" can be used instead of "||". Parameters still use "|", though!  Example:
+ <nowiki>!</nowiki>''params''|cell1
+
+===Captions===
+A <caption> tag is created by
+ |+ Caption
+which generates
+ <caption>Caption</caption>
+You can also use parameters:
+ |+ ''params''|Caption
+which will generate
+ <caption ''params''>Caption</caption>
+
+==Text next to a table==
+''(To see demonstrated effects, you may have to increase or decrease the fontsize setting of the browser; also you can vary the width of the browser window.)''
+
+You can use '''align="right"''', text after the table code appears to the left of the table. 
+
+{| class="wikitable" align="right"
+|+Multiplication table 5×3
+|-
+! × !! 1 !! 2 !! 3
+|-
+! 1
+| 1 || 2 || 3
+|-
+! 2
+| 2 || 4 || 6
+|-
+! 3
+| 3 || 6 || 9
+|-
+! 4
+| 4 || 8 || 12
+|-
+! 5
+| 5 || 10 || 15
+|} 
+
+Here begins the text immediately after 5×3 multiplication table. 
+
+[[w:Lorem ipsum|Lorem ipsum]] dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer, leo orci mollis ipsum, eget suscipit eros purus in ante. At ipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel, lorem. Sed lacinia. Suspendisse potenti. Sed ultricies cursus lectus. In id magna sit amet nibh suscipit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctor quis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id, blandit vitae, varius ac, purus. Mauris at ipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel, lorem. Sed lacinia. Suspendisse potenti. Sed ultricies cursus lectus. In id magna sit amet nibh suscipit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctor quis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id, blandit vitae, varius ac, purus. 
+{{clear}}
+
+However, '''do not put preformatted text there''', it may overlap the table because it does not wrap.
+To prevent this, use <nowiki><br style="clear:both;"></nowiki>:
+
+{| class="wikitable" align="right"
+|+Multiplication table 4×3
+|-
+! × !! 1 !! 2 !! 3
+|-
+! 1
+| 1 || 2 || 3
+|-
+! 2
+| 2 || 4 || 6
+|-
+! 3
+| 3 || 6 || 9
+|-
+! 4
+| 4 || 8 || 12
+|} 
+
+Here begins the text immediately after 4×3 multiplication table. 
+
+[[w:Lorem ipsum|Lorem ipsum]] dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer, leo orci mollis ipsum, eget suscipit eros purus in ante. '''now''' comes the cleared BR: <br style="clear:both;">
+ here it was so preformatted text will start only after the table ended
+
+You can use '''align="left"''', table will appear at the left and the following text to the right of it (but perhaps too close):
+
+{| class="wikitable" align="left"
+|+Multiplication table 2×3
+|-
+! × !! 1 !! 2 !! 3
+|-
+! 1
+| 1 || 2 || 3
+|-
+! 2
+| 2 || 4 || 6
+|-
+|} 
+
+Here begins the text immediately after 2×3 multiplication table. 
+
+[[w:Lorem ipsum|Lorem ipsum]] dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer, leo orci mollis ipsum, eget suscipit eros purus in ante. At ipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel, lorem. Sed lacinia. Suspendisse potenti. Sed ultricies cursus lectus. In id magna sit amet nibh suscipit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctor quis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id, blandit vitae, varius ac, purus. Mauris at ipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel, lorem. Sed lacinia. Suspendisse potenti. Sed ultricies cursus lectus. In id magna sit amet nibh suscipit euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctor quis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede, molestie id, blandit vitae, varius ac, purus.
+
+{{clr}}
+
+==Setting your column widths==
+If you wish to force column widths to your own requirements, rather than accepting the width of the widest text element in a column's cells, then follow this example.  Note that wrap-around of text is forced.
+
+<blockquote style="background: white; border: 1px solid black; padding: 1em;">
+<pre><nowiki>
+{| border="1" cellpadding="2"
+!width="50"|Name
+!width="225"|Effect
+!width="225"|Games Found In
+|-
+|Pokeball
+|Regular Pokeball
+|All Versions
+|-
+|Great Ball
+|Better than a Pokeball
+|All Versions
+|}
+</nowiki></pre>
+</blockquote>
+
+<blockquote style="background: white; border: 1px solid black; padding: 1em;">
+{| border="1" cellpadding="2"
+!width="50"|Name
+!width="225"|Effect
+!width="225"|Games Found In
+|-
+|Pokeball
+|Regular Pokeball
+|All Versions
+|-
+|Great Ball
+|Better than a Pokeball
+|All Versions
+|}
+</blockquote>
+
+==Setting parameters==
+
+At the start of a cell, add your parameter followed by a single pipe. For example <tt>width=300px|</tt> will set that cell to a width of 300 pixels. To set more than one parameter, leave a space between each one.
+
+=== Wikipedia code ===
+<blockquote style="background: white; border: 1px solid black; padding: 1em;">
+<pre><nowiki>
+{|
+|-
+| bgcolor=red|cell1 || width=300px bgcolor=blue|cell2 || bgcolor=green|cell3
+|}
+</nowiki></pre></blockquote>
+
+=== What it looks like in your browser ===
+
+<blockquote style="background: white; border: 1px solid black; padding: 1em;">
+{|
+|-
+| bgcolor=red|cell1 || width=300px bgcolor=blue|cell2 || bgcolor=green|cell3
+|}
+</blockquote>
+
+==Decimal point alignment==
+
+A method to get columns of numbers aligned at the decimal point is as follows:
+
+<pre><blockquote>
+{| cellpadding=0 cellspacing=0
+|align=right| 432 || .1
+|-
+|align=right| 43 || .21
+|-
+|align=right| 4 || .321
+|}
+</blockquote></pre>
+
+gives
+
+<blockquote>
+{| cellpadding=0 cellspacing=0
+|align=right| 432 || .1
+|-
+|align=right| 43 || .21
+|-
+|align=right| 4 || .321
+|}
+</blockquote>
+
+If the column of numbers appears in a table with cell padding or cell spacing, one can still align the decimal points without an unsightly gap in the middle.  Embed a table in each number's cell and specify its column widths.  Make the embedded tables' column widths the same for each cell in the column.  (If decimal points are still misaligned using this method, the main table's column may be too narrow.  Add a parameter to increase the column's width.)
+
+<pre><blockquote>
+{|border = 1 cellpadding=4 cellspacing=2 width=72
+|
+{|cellpadding=0 cellspacing=0 width="100%"
+|align=right width="50%"| 432 ||width="50%"| .1
+|}
+|-
+|
+{|cellpadding=0 cellspacing=0 width="100%"
+|align=right width="50%"| 43 ||width="50%"| .21
+|}
+|-
+|
+{|cellpadding=0 cellspacing=0 width="100%"
+|align=right width="50%"| 4 ||width="50%"| .321
+|}
+|}
+</blockquote></pre>
+
+gives
+
+<blockquote>
+{|border = 1 cellpadding=4 cellspacing=2 width=72
+|
+{|cellpadding=0 cellspacing=0 width="100%"
+|align=right width="50%"| 432 ||width="50%"| .1
+|}
+|-
+|
+{|cellpadding=0 cellspacing=0 width="100%"
+|align=right width="50%"| 43 ||width="50%"| .21
+|}
+|-
+|
+{|cellpadding=0 cellspacing=0 width="100%"
+|align=right width="50%"| 4 ||width="50%"| .321
+|}
+|}
+</blockquote>
+
+In simple cases one can dispense with the table feature and simply start the lines with a space, and put spaces to position the numbers:
+
+ 432.1
+  43.21
+   4.321
+
+==Style classes==
+
+Some users have created CSS classes to make table styles easier.  Instead of remembering table parameters, you just include an appropriate style class after the <code>{|</code>.  This helps keep table formatting consistent, and can allow a single change to the class to fix a problem or enhance the look of all tables that use it.  For instance, this:
+
+{| border="1" cellpadding="2"
+|+Multiplication table
+|-
+! × !! 1 !! 2 !! 3
+|-
+! 1
+| 1 || 2 || 3
+|-
+! 2
+| 2 || 4 || 6
+|-
+! 3
+| 3 || 6 || 9
+|-
+! 4
+| 4 || 8 || 12
+|-
+! 5
+| 5 || 10 || 15
+|}
+
+becomes this:
+
+{| class="wikitable"
+|+Multiplication table
+|-
+! × !! 1 !! 2 !! 3
+|-
+! 1
+| 1 || 2 || 3
+|-
+! 2
+| 2 || 4 || 6
+|-
+! 3
+| 3 || 6 || 9
+|-
+! 4
+| 4 || 8 || 12
+|-
+! 5
+| 5 || 10 || 15
+|}
+
+simply by replacing the <code>border="1" cellpadding="2"</code> section with <code><nowiki>class="wikitable"</nowiki></code>, because (on this wiki) the ''wikitable'' class in [[MediaWiki:Common.css]] contains the following style rules:
+<code><pre>
+/* wikitable/prettytable class for skinning normal tables */
+
+table.wikitable,
+table.prettytable {
+  margin: 1em 1em 1em 0;
+  background: #f9f9f9;
+  border: 1px #aaaaaa solid;
+  border-collapse: collapse;
+}
+
+table.wikitable th, table.wikitable td,
+table.prettytable th, table.prettytable td {
+  border: 1px #aaaaaa solid;
+  padding: 0.2em;
+}
+
+table.wikitable th,
+table.prettytable th {
+  background: #f2f2f2;
+  text-align: center;
+}
+
+table.wikitable caption,
+table.prettytable caption {
+  margin-left: inherit;
+  margin-right: inherit;
+}
+</pre></code>
+
+==Gallery==
+
+As a by-product of the image gallery feature, a table can be made with the gallery tag; if a text entry contains a link, the whole entry is ignored.
+
+<pre>
+<gallery>
+Drenthe
+Flevoland
+Friesland
+Gelderland
+Groningen
+Limburg
+North Brabant (capital: [[Den Bosch]]) 
+North Holland
+Overijssel
+South Holland
+Utrecht
+Zeeland
+</gallery>
+</pre>
+
+gives:
+
+<gallery>
+Drenthe
+Flevoland
+Friesland
+Gelderland
+Groningen
+Limburg
+North Brabant (capital: [[Den Bosch]]) 
+North Holland
+Overijssel
+South Holland
+Utrecht
+Zeeland
+</gallery>
+
+==See also==
+*[[m:simplified table syntax]]
+*[[m:wiki markup tables]]
+*[[w:en:User:Dcljr/Tables]]
+*examples:
+**[[w:en:Template talk:Chess position|Chess board]]
+**[[w:en:Template talk:Game of Go Position|Go board]]
+**[[w:en:Monopoly (game)#Board|Monopoly board]]
+**[[m:Template talk:Square 8x8 pentomino example|Square 8x8 pentomino example]]
+
+==External links==
+*[http://www.cnic.org/html2mediawiki.html HTML tables to wiki converter at cnic.org]
+*[http://area23.brightbyte.de/csv2wp.php csv2wp] - converts [[w:comma-separated values|comma-separated values]] (CSV) format to pipe syntax. You may use this to import tables from Excel etc. ([[wikipedia:de:Benutzer:Duesentrieb/csv2wp|more information]])
+*[http://www.wackyboy.com/ConvertHtmlTableToWikiTable.html HTML tables to wiki converter at wackyboy.com]
+*[http://www.uni-bonn.de/~manfear/html2wiki-tables.php HTML tables to wiki converter at uni-bonn.de]
+*[http://diberri.dyndns.org/html2wiki.html HTML tables to wiki converter at diberri.dyndns.org]
+*[http://pywikipediabot.sourceforge.net/ pywikipediabot] (can convert HTML tables to wiki)
+
+{{h:f|enname=Table}}<!--When translating leave this line intact-->
+

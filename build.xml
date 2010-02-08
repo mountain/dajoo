@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="build" name="dajoo">
+
+  <!-- set global properties for this build -->
+  <property name="dajoo" location="${basedir}" />
+  <property name="lib" value="lib" />
+  <property name="plugins" value="plugins" />
+  <property name="classes" value="classes" />
+  <property name="src" value="src" />
+  <property name="build.compiler" value="modern" />
+  <property name="javac.sourcelevel" value="1.5" />
+  <property name="javac.debug" value="true" />
+  <property name="javac.debuglevel" value="lines,vars,source" />
+  <property name="javac.optimize" value="off" />
+
+  <!-- = = = = = = = = = = = = = = = = =
+          macrodef: writeable
+         = = = = = = = = = = = = = = = = = -->
+  <macrodef name="writeable">
+    <element name="files" />
+    <sequential>
+      <apply executable="attrib" verbose="true">
+        <arg value="-R" />
+        <files />
+      </apply>
+    </sequential>
+  </macrodef>
+
+  <!-- ********************** All build commands for RELEASE ***************** -->
+
+  <target name="build" depends=" build-dajoo, build-httpd, build-tag, build-frame, build-account, build-render, build-template, build-wiki " />
+
+  <target name="build-dajoo" depends="">
+    <mkdir dir="dev/dajoo/${classes}" />
+    <javac compiler="${build.compiler}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" optimize="${javac.optimize}" destdir="dev/dajoo/${classes}" failonerror="yes" includeantruntime="no" includejavaruntime="no" srcdir="dev/dajoo/${src}" verbose="no">
+      <classpath>
+        <pathelement location="${lib}/picocontainer-1.2.jar" />
+        <pathelement location="${lib}/log4j-1.2.13.jar" />
+      </classpath>
+    </javac>
+    <jar basedir="dev/dajoo/${classes}" jarfile="dajoo.jar">
+      <manifest>
+        <attribute name="Main-Class" value="org.dajoo.DajooMain"/>
+        <attribute name="Class-Path" value="lib/picocontainer-1.2.jar lib/freemarker.jar lib/log4j-1.2.13.jar"/>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="build-httpd" depends="build-dajoo">
+    <mkdir dir="dev/httpd/${classes}" />
+    <javac compiler="${build.compiler}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" optimize="${javac.optimize}" destdir="dev/httpd/${classes}" failonerror="yes" includeantruntime="no" includejavaruntime="no" srcdir="dev/httpd/${src}" verbose="no">
+      <classpath>
+        <pathelement location="dajoo.jar" />
+        <pathelement location="${lib}/picocontainer-1.2.jar" />
+        <pathelement location="${lib}/log4j-1.2.13.jar" />
+      </classpath>
+    </javac>
+    <jar basedir="dev/httpd/${classes}" jarfile="${plugins}/httpd.jar">
+      <manifest>
+        <section name="Plugin">
+          <attribute name="Plugin-Name" value="Httpd"/>
+          <attribute name="Plugin-Class" value="org.dajoo.httpd.HttpdPlugin"/>
+        </section>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="build-frame" depends="build-dajoo,build-httpd,build-template">
+    <mkdir dir="dev/frame/${classes}" />
+    <javac compiler="${build.compiler}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" optimize="${javac.optimize}" destdir="dev/frame/${classes}" failonerror="yes" includeantruntime="no" includejavaruntime="no" srcdir="dev/frame/${src}" verbose="no">
+      <classpath>
+        <pathelement location="dajoo.jar" />
+        <pathelement location="${lib}/picocontainer-1.2.jar" />
+        <pathelement location="${lib}/log4j-1.2.13.jar" />
+        <pathelement location="${plugins}/httpd.jar" />
+        <pathelement location="${plugins}/template.jar" />
+      </classpath>
+    </javac>
+    <jar basedir="dev/frame/${classes}" jarfile="${plugins}/frame.jar" >
+      <manifest>
+        <section name="Plugin">
+          <attribute name="Plugin-Name" value="Frame"/>
+          <attribute name="Plugin-Class" value="org.dajoo.frame.FramePlugin"/>
+          <attribute name="Dependencies" value="Httpd Template"/>
+        </section>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="build-template" depends="build-dajoo">
+    <mkdir dir="dev/template/${classes}" />
+    <javac compiler="${build.compiler}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" optimize="${javac.optimize}" destdir="dev/template/${classes}" failonerror="yes" includeantruntime="no" includejavaruntime="no" srcdir="dev/template/${src}" verbose="no">
+      <classpath>
+        <pathelement location="dajoo.jar" />
+        <pathelement location="${lib}/picocontainer-1.2.jar" />
+        <pathelement location="${lib}/freemarker.jar" />
+        <pathelement location="${lib}/log4j-1.2.13.jar" />
+      </classpath>
+    </javac>
+    <jar basedir="dev/template/${classes}" jarfile="${plugins}/template.jar">
+      <manifest>
+        <section name="Plugin">
+          <attribute name="Plugin-Name" value="Template"/>
+          <attribute name="Plugin-Class" value="org.dajoo.template.TemplatePlugin"/>
+        </section>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="build-render" depends="build-dajoo">
+    <mkdir dir="dev/render/${classes}" />
+    <javac compiler="${build.compiler}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" optimize="${javac.optimize}" destdir="dev/render/${classes}" failonerror="yes" includeantruntime="no" includejavaruntime="no" srcdir="dev/render/${src}" verbose="no">
+      <classpath>
+        <pathelement location="dajoo.jar" />
+        <pathelement location="${lib}/picocontainer-1.2.jar" />
+        <pathelement location="${lib}/log4j-1.2.13.jar" />
+      </classpath>
+    </javac>
+    <jar basedir="dev/render/${classes}" jarfile="${plugins}/render.jar">
+      <manifest>
+        <section name="Plugin">
+          <attribute name="Plugin-Name" value="Render"/>
+          <attribute name="Plugin-Class" value="org.dajoo.render.RenderPlugin"/>
+        </section>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="build-wiki" depends="build-dajoo,build-httpd,build-frame,build-template,build-render">
+    <mkdir dir="dev/wiki/${classes}" />
+    <javac compiler="${build.compiler}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" optimize="${javac.optimize}" destdir="dev/wiki/${classes}" failonerror="yes" includeantruntime="no" includejavaruntime="no" srcdir="dev/wiki/${src}" verbose="no">
+      <classpath>
+        <pathelement location="dajoo.jar" />
+        <pathelement location="${lib}/picocontainer-1.2.jar" />
+        <pathelement location="${lib}/freemarker.jar" />
+        <pathelement location="${plugins}/httpd.jar" />
+        <pathelement location="${plugins}/render.jar" />
+        <pathelement location="${plugins}/frame.jar" />
+        <pathelement location="${plugins}/template.jar" />
+        <pathelement location="${lib}/log4j-1.2.13.jar" />
+      </classpath>
+    </javac>
+    <jar basedir="dev/wiki/${classes}" jarfile="${plugins}/wiki.jar" >
+      <manifest>
+        <section name="Plugin">
+          <attribute name="Plugin-Name" value="Wiki"/>
+          <attribute name="Plugin-Class" value="org.dajoo.wiki.WikiPlugin"/>
+          <attribute name="Dependencies" value="Httpd Frame Render Template"/>
+        </section>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="build-account" depends="build-dajoo">
+    <mkdir dir="dev/account/${classes}" />
+    <javac compiler="${build.compiler}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" optimize="${javac.optimize}" destdir="dev/account/${classes}" failonerror="yes" includeantruntime="no" includejavaruntime="no" srcdir="dev/account/${src}" verbose="no">
+      <classpath>
+        <pathelement location="dajoo.jar" />
+        <pathelement location="${lib}/picocontainer-1.2.jar" />
+        <pathelement location="${lib}/log4j-1.2.13.jar" />
+      </classpath>
+    </javac>
+    <jar basedir="dev/account/${classes}" jarfile="${plugins}/account.jar">
+      <manifest>
+        <section name="Plugin">
+          <attribute name="Plugin-Name" value="Account"/>
+          <attribute name="Plugin-Class" value="org.dajoo.account.AccountPlugin"/>
+        </section>
+      </manifest>
+    </jar>
+  </target>
+
+  <target name="build-tag" depends="build-dajoo">
+    <mkdir dir="dev/tag/${classes}" />
+    <javac compiler="${build.compiler}" debug="${javac.debug}" debuglevel="${javac.debuglevel}" optimize="${javac.optimize}" destdir="dev/tag/${classes}" failonerror="yes" includeantruntime="no" includejavaruntime="no" srcdir="dev/tag/${src}" verbose="no">
+      <classpath>
+        <pathelement location="dajoo.jar" />
+        <pathelement location="${lib}/picocontainer-1.2.jar" />
+        <pathelement location="${lib}/log4j-1.2.13.jar" />
+      </classpath>
+    </javac>
+    <jar basedir="dev/tag/${classes}" jarfile="${plugins}/tag.jar" >
+      <manifest>
+        <section name="Plugin">
+          <attribute name="Plugin-Name" value="Tag"/>
+          <attribute name="Plugin-Class" value="org.dajoo.tag.TagPlugin"/>
+        </section>
+      </manifest>
+    </jar>
+  </target>
+
+</project>

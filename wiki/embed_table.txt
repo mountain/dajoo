@@ -1,0 +1,42 @@
+{| width="250" align="right" border="1" cellpadding="2" cellspacing="0" style="margin: 0em 0.5em 0em 0.5em;"
+! align="center" colspan="2" style="background:#efefef;" | 
+<big>'''<span lang=it>Matteo Ricci</span> / 利玛窦'''</big>
+|-
+|align="center" colspan="2"|
+{|
+|align=right|号：||胡泰来老师，清泰，西江
+|-
+|align=right|尊称：||泰西儒士
+|}
+|-
+| align="center" colspan="2"| [[Image:Ricciportrait.jpg|none|250px]]<small>该画像为利玛窦死后不久在北京所画。后由[[金尼阁]]带回[[罗马]]。现保存于罗马的耶稣会总部Chiesa di Gesu大教堂。图中利玛窦身穿中国士人的服装，金尼阁解释为“中国博士”的服饰。</small>
+|-
+!<strong>出生</strong>
+|[[1552年]][[10月6日]]<br>[[意大利]][[马切拉塔]]城
+|-
+!<strong>逝世</strong>
+|[[1610年]][[5月11日]]<br>[[中国]][[北京]]
+|-
+!<strong>宗教信仰</strong>
+|[[天主教]]
+|}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

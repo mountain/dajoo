@@ -1,0 +1,5 @@
+In this release, we just set the beginning point of our project.
+
+* the plugin framework was released.
+* the http daemon plugin was released.
+* prototype of the wiki render and wiki plugins was released.

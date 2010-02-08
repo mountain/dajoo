@@ -1,0 +1,238 @@
+2006-06-11 22:07:25,901 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/favicon.ico
+2006-06-11 22:07:25,901 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:25,901 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:27,974 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:27,974 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:27,974 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /wiki/Books
+2006-06-11 22:07:27,974 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = wiki:
+2006-06-11 22:07:27,974 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.wiki.SrvShowWiki
+2006-06-11 22:07:27,974 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Book:???????
+2006-06-11 22:07:27,974 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Book:????
+2006-06-11 22:07:27,974 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Book:?????
+2006-06-11 22:07:27,984 [Thread-3] DEBUG freemarker.cache - wiki_show.ftl[en_US,utf-8,parsed] using cached since C:\wolf\dajoo\template\wiki_show.ftl didn't change.
+2006-06-11 22:07:28,004 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:28,004 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:28,004 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /style.css
+2006-06-11 22:07:28,004 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:28,004 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:28,084 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:28,084 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:28,084 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /print.css
+2006-06-11 22:07:28,084 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:28,084 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:28,114 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:28,174 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:28,174 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/bullet.gif
+2006-06-11 22:07:28,174 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:28,174 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:34,303 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:34,333 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:34,333 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/favicon.ico
+2006-06-11 22:07:34,333 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:34,333 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,260 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:46,260 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:46,260 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /wiki/start?action=edit
+2006-06-11 22:07:46,260 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = wiki:edit
+2006-06-11 22:07:46,260 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.wiki.SrvEditWiki
+2006-06-11 22:07:46,260 [Thread-3] DEBUG freemarker.cache - Could not find template in cache, creating new one; id=[wiki_edit.ftl[en_US,utf-8,parsed] ]
+2006-06-11 22:07:46,260 [Thread-3] DEBUG freemarker.cache - Compiling FreeMarker template wiki_edit.ftl[en_US,utf-8,parsed]  from C:\wolf\dajoo\template\wiki_edit.ftl
+2006-06-11 22:07:46,340 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:46,340 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:46,340 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /style.css
+2006-06-11 22:07:46,340 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:46,340 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,411 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:46,411 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:46,411 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /print.css
+2006-06-11 22:07:46,411 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:46,411 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,431 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:46,441 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:46,441 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /script.js
+2006-06-11 22:07:46,441 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:46,441 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,441 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\script.js
+2006-06-11 22:07:46,441 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: js
+2006-06-11 22:07:46,441 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: unkown/unkown
+2006-06-11 22:07:46,491 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:46,491 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:46,491 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/bold.png
+2006-06-11 22:07:46,491 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,491 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,491 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\bold.png
+2006-06-11 22:07:46,521 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:46,541 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,581 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,591 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/underline.png
+2006-06-11 22:07:46,591 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,591 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,591 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\underline.png
+2006-06-11 22:07:46,751 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,751 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,761 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/code.png
+2006-06-11 22:07:46,771 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,771 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,771 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\code.png
+2006-06-11 22:07:46,781 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,781 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,781 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/fonth1.png
+2006-06-11 22:07:46,781 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,781 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,781 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\fonth1.png
+2006-06-11 22:07:46,781 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,781 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/fonth2.png
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\fonth2.png
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/fonth3.png
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\fonth3.png
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,791 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/fonth4.png
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\fonth4.png
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/fonth5.png
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,801 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\fonth5.png
+2006-06-11 22:07:46,831 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,831 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,831 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/link.png
+2006-06-11 22:07:46,831 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,831 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,831 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\link.png
+2006-06-11 22:07:46,841 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,841 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,861 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/extlink.png
+2006-06-11 22:07:46,861 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,861 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,861 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\extlink.png
+2006-06-11 22:07:46,861 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,861 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,881 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/list.png
+2006-06-11 22:07:46,881 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,881 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,881 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\list.png
+2006-06-11 22:07:46,891 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,891 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/list_ul.png
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\list_ul.png
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/rule.png
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,901 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\rule.png
+2006-06-11 22:07:46,911 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,911 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,911 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/image.png
+2006-06-11 22:07:46,911 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,911 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,911 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\image.png
+2006-06-11 22:07:46,911 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,911 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:46,921 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:46,921 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/italic.png
+2006-06-11 22:07:46,921 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:46,921 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:46,921 [Thread-3] DEBUG org.dajoo.httpd.FileContent - Try to open file: file = C:\wolf\dajoo\httpd\images\italic.png
+2006-06-11 22:07:46,921 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File extension: png
+2006-06-11 22:07:46,921 [Thread-3] DEBUG org.dajoo.httpd.FileContent - File type: image/png
+2006-06-11 22:07:55,143 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /wiki/start?save
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = wiki:save
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.wiki.SrvSaveWiki
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: ???
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: ????
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: ???
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: ???????
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Table_refernce
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Simple_table
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Embed_table
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Color_table
+2006-06-11 22:07:55,173 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: List_test
+2006-06-11 22:07:55,183 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Books
+2006-06-11 22:07:55,183 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - add into repository: Start
+2006-06-11 22:07:55,183 [Thread-3] DEBUG freemarker.cache - wiki_show.ftl[en_US,utf-8,parsed] using cached since C:\wolf\dajoo\template\wiki_show.ftl didn't change.
+2006-06-11 22:07:55,203 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:55,203 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:55,203 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /style.css
+2006-06-11 22:07:55,203 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:55,203 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:55,223 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:55,223 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:55,223 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /print.css
+2006-06-11 22:07:55,223 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:55,223 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:57,006 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:57,006 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:57,006 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /wiki/Books
+2006-06-11 22:07:57,006 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = wiki:
+2006-06-11 22:07:57,006 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.wiki.SrvShowWiki
+2006-06-11 22:07:57,006 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Book:???????
+2006-06-11 22:07:57,006 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Book:????
+2006-06-11 22:07:57,006 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Book:?????
+2006-06-11 22:07:57,006 [Thread-3] DEBUG freemarker.cache - wiki_show.ftl[en_US,utf-8,parsed] cached copy not yet stale; using cached.
+2006-06-11 22:07:57,066 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:57,066 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:57,066 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /style.css
+2006-06-11 22:07:57,066 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:57,066 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:57,086 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:57,086 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:57,086 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /print.css
+2006-06-11 22:07:57,086 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:07:57,086 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:07:57,116 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:07:57,116 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:07:57,116 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/bullet.gif
+2006-06-11 22:07:57,116 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:07:57,116 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:08:11,457 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:08:11,457 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:08:11,457 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /wiki/start
+2006-06-11 22:08:11,457 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = wiki:
+2006-06-11 22:08:11,457 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.wiki.SrvShowWiki
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: ???
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: ????
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: ???
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: ???????
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Table_refernce
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Simple_table
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Embed_table
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Color_table
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: List_test
+2006-06-11 22:08:11,467 [Thread-3] DEBUG org.dajoo.render.WikiNameMgrImpl - query from repository: Books
+2006-06-11 22:08:11,467 [Thread-3] DEBUG freemarker.cache - wiki_show.ftl[en_US,utf-8,parsed] using cached since C:\wolf\dajoo\template\wiki_show.ftl didn't change.
+2006-06-11 22:08:11,527 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:08:11,557 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:08:11,557 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /style.css
+2006-06-11 22:08:11,557 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:08:11,557 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:08:11,577 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:08:11,577 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:08:11,577 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /print.css
+2006-06-11 22:08:11,577 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = :
+2006-06-11 22:08:11,577 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:08:11,597 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:08:11,607 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:08:11,607 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/bullet.gif
+2006-06-11 22:08:11,607 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:08:11,607 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
+2006-06-11 22:08:11,657 [Thread-2] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is enqueued.
+2006-06-11 22:08:11,687 [Thread-3] DEBUG org.dajoo.httpd.RequestPipeQueue - Request is dequeued.
+2006-06-11 22:08:11,687 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - path = /images/favicon.ico
+2006-06-11 22:08:11,687 [Thread-3] DEBUG org.dajoo.httpd.ServletManagerImpl - key = images:
+2006-06-11 22:08:11,687 [Thread-3] DEBUG org.dajoo.httpd.RequestProcessor - Servlet was selected: servlet = org.dajoo.httpd.FileServlet
